@@ -1,12 +1,12 @@
   Adbuddiz cordova plugin
 =======================
 
+To start first http://adbuddiz.com
 
-http://adbuddiz.com
+
+IOS
 
 1. Download SDK
-
-iOS Objective-C SDK 2.3.1:  Download
 
 2. Add mandatory frameworks
 
@@ -20,18 +20,19 @@ In Project target / General / Linked Frameworks and Libraries, also add the foll
 > - StoreKit.framework
 
 
-In your AppDelegate, import the following header : #import ```
+3. In your AppDelegate, import the following header : #import
+
 ```
 <AdBuddiz/AdBuddiz.h>
 ```
-Then add the following code depending on your app to didFinishLaunchingWithOptions
+3. Add the following code depending on your app to didFinishLaunchingWithOptions
 ```
 [[NSNotificationCenter defaultCenter]addObserver:self
     selector:@selector(applicationDidBecomeActive:)
     name:UIApplicationDidBecomeActiveNotification
     object:nil];
 ```
-then add function
+4. add function
 ```
 -(void)applicationDidBecomeActive:(UIApplication *)application
 {
@@ -41,12 +42,17 @@ then add function
 ```
 ### Cordova
 
-Install plugin
+5. Install plugin
 ```
  cordova plugin add  https://github.com/avtehnik/adbuddiz-cordova-plugin.git
 ```
+
+6. rebuild your app
+```
+ cordova build ios
+```
  
-then in somewhere in your js code run 
+7. Somewhere in your js code run next function
 
 ```
 AdBuddizShow(); 
