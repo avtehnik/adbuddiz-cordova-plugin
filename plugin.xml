@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="org.apache.cordova.device" version="0.2.3">
+       <name>AdBuddiz</name>
+       <description>adbuddiz Plugin</description>
+       <license>Apache 2.0</license>
+       <keywords>adbuddiz,monetize your app</keywords>
+       <js-module src="www/adbuddiz.js" name="adbuddiz">
+           <clobbers target="window" />
+       </js-module>
+       <platform name="ios">
+           <config-file target="config.xml" parent="/*">
+			   <feature name="AdBuddizPlugin">
+			           <param name="ios-package" value="AdBuddizPlugin" />
+			           <param name="onload" value="true" />
+			       </feature>
+           </config-file>
+           <header-file src="src/ios/AdBuddizPlugin.h" />
+           <source-file src="src/ios/AdBuddizPlugin.m" />
+       </platform>
+   </plugin>
